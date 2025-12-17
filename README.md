@@ -93,7 +93,7 @@ Returns `NULL` if:
 
 read fails
 
-memory allocation fails
+* Memory allocation fails
 
 All allocated memory is properly freed on failure
 
