@@ -80,7 +80,7 @@ A implementação utiliza funções auxiliares internas para gerenciar estado e 
 
 #### Tratamento de Erros e Proteções
 
-A função retorna NULL se:
+A função retorna `NULL` se:
 
 * `fd < 0`
 
@@ -93,6 +93,44 @@ A função retorna NULL se:
 * Toda a memória alocada é liberada corretamente em caso de falha
 
 * Nenhum memory leak é introduzido
+
+### Bônus
+
+O projeto **get_next_line** possui uma parte bônus opcional, que só deve ser avaliada caso a parte obrigatória esteja perfeitamente funcional e sem erros.
+
+#### Requisitos do Bônus
+
+Implementar uma versão de **get_next_line** capaz de lidar com múltiplos **file descriptors** simultaneamente
+
+O comportamento deve ser correto mesmo quando chamadas intercaladas são feitas com diferentes fds
+
+Cada file descriptor deve manter seu próprio estado interno de leitura
+
+#### Restrições
+
+* É permitido o uso de apenas uma variável estática
+
+* O gerenciamento de memória deve ser feito de forma segura, sem memory leaks
+
+* O comportamento deve permanecer idêntico ao da parte obrigatória para um único fd
+
+#### Estrutura do Bônus
+
+A implementação do bônus deve estar nos seguintes arquivos:
+
+`get_next_line_bonus.c` - Implementação da função get_next_line com suporte a múltiplos file descriptors
+
+`get_next_line_bonus.h` - Arquivo de cabeçalho do bônus
+
+`get_next_line_utils_bonus.c` - Funções utilitárias usadas pela versão bônus
+
+#### Compilação do Bônus
+
+Exemplo de compilação da parte bônus:
+```bash
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line_bonus.c get_next_line_utils_bonus.c
+```
+Assim como na parte obrigatória, o valor de `BUFFER_SIZE` pode ser alterado para testar diferentes comportamentos de leitura.
 
 ### Recursos
 
@@ -209,6 +247,44 @@ Returns `NULL` if:
 * All allocated memory is properly freed on failure
 
 * No memory leaks are introduced
+
+### Bonus
+
+The **get_next_line project** includes an optional bonus part, which is evaluated only if the mandatory part is perfectly functional and free of errors.
+
+#### Bonus Requirements
+
+Implement a version of **get_next_line that** can handle multiple **file descriptors** simultaneously
+
+* The function must behave correctly even when calls are interleaved across different file descriptors
+
+* Each file descriptor must maintain its own internal reading state
+
+#### Constraints
+
+* Only one static variable is allowed
+
+* Memory management must be safe, with no memory leaks
+
+* The behavior must remain identical to the mandatory part when using a single fd
+
+#### Bonus File Structure
+
+The bonus implementation must be placed in the following files:
+
+`get_next_line_bonus.c` - Implementation of get_next_line with support for multiple file descriptors
+
+`get_next_line_bonus.h` - Bonus header file
+
+`get_next_line_utils_bonus.c` - Utility functions used by the bonus version
+
+#### Bonus Compilation
+
+Example compilation command for the bonus part:
+```bash
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line_bonus.c get_next_line_utils_bonus.c
+```
+As in the mandatory part, the `BUFFER_SIZE` value can be changed to test different buffering behaviors.
 
 ### Resources
 
