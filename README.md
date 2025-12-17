@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <pdiniz-l>.*
+*This project has been created as part of the 42 curriculum by **pdiniz-l**.*
 
 # get_next_line
 
