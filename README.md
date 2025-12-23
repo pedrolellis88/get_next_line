@@ -7,8 +7,6 @@ Este projeto foi criado por **Pedro Henrique Dinis Lellis**
 
 O objetivo deste projeto é implementar uma solução robusta e segura em termos de memória, que utilize leitura bufferizada, preserve o estado entre chamadas e trate corretamente casos extremos como fim de arquivo (EOF), ausência de caractere de nova linha, file descriptors inválidos e falhas de alocação de memória.
 
-Esta implementação segue as especificações do **Get Next Line v13** do currículo da 42 e foi escrita em conformidade com as restrições do projeto e as funções permitidas.
-
 ### Instruções
 
 #### Compilação
@@ -134,8 +132,6 @@ Assim como na parte obrigatória, o valor de `BUFFER_SIZE` pode ser alterado par
 
 ### Recursos
 
-42 School — enunciado do Get Next Line v13
-
 #### Documentação POSIX:
 
 * read(2)
@@ -159,10 +155,6 @@ Assim como na parte obrigatória, o valor de `BUFFER_SIZE` pode ser alterado par
 **get_next_line** is a C library that provides a function to read a file descriptor **line by line**, returning one line per function call.
 
 The goal of this project is to implement a robust, memory-safe solution that handles buffered reading, preserves state between calls, and correctly manages edge cases such as end-of-file, missing newline characters, invalid file descriptors, and allocation failures.
-
-This implementation follows the specifications of **Get Next Line v13** from the 42 curriculum and is written in compliance with the project constraints and allowed functions.
-
----
 
 ### Instructions
 
@@ -287,8 +279,6 @@ cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line_bonus.c get_next_line_u
 As in the mandatory part, the `BUFFER_SIZE` value can be changed to test different buffering behaviors.
 
 ### Resources
-
-42 School — Get Next Line v13 subject
 
 #### POSIX documentation:
 
