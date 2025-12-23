@@ -150,7 +150,7 @@ Assim como na parte obrigatória, o valor de `BUFFER_SIZE` pode ser alterado par
 
 # English Version
 
-*This project has been created as part of the 42 curriculum by **pdiniz-l**.*
+*This project has been created by **Pedro Henrique Dinis Lellis**
 
 ## get_next_line
 
